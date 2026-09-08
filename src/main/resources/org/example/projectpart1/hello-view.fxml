@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.StackPane?>
+<BorderPane fx:id="borderHolder" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.projectpart1.HelloController">
+    <top>
+        <VBox alignment="CENTER">
+            <MenuBar>
+                <Menu text="Name">
+                    <MenuItem text="Set Player 1 Name" onAction="#changePlayer1"/>
+                    <MenuItem text="Set Player 2 Name" onAction="#changePlayer2"/>
+                </Menu>
+                <Menu text="Ball Speed">
+                    <MenuItem text="Easy" onAction="#speedEasy"/>
+                    <MenuItem text="Medium" onAction="#speedMedium"/>
+                    <MenuItem text="Hard" onAction="#speedHard"/>
+                </Menu>
+                <Menu text="Racket Length">
+                    <MenuItem text="Long" onAction="#setLengthLong"/>
+                    <MenuItem text="medium" onAction="#setLengthMedium"/>
+                    <MenuItem text="short" onAction="#setLengthShort"/>
+                </Menu>
+                <Menu text="Racket Width">
+                    <MenuItem text="Thick" onAction="#setWidthThick"/>
+                    <MenuItem text="Normal" onAction="#setWidthMedium"/>
+                    <MenuItem text="Thin" onAction="#setWidthThin"/>
+                </Menu>
+                <Menu text="Game Length">
+                    <MenuItem text="set goals need for win" onAction="#setWinCondition"/>
+                </Menu>
+                <Menu text="Ball Acceleration">
+                    <MenuItem text="Slow" onAction="#setAccelerationSlow"/>
+                    <MenuItem text="Medium (default)" onAction="#setAccelerationMedium"/>
+                    <MenuItem text="Fast" onAction="#setAccelerationFast"/>
+                </Menu>
+                <Menu text="Exit">
+                    <MenuItem text="Exit" onAction="#exitGame"/>
+                </Menu>
+            </MenuBar>
+        </VBox>
+    </top>
+    <left>
+        <VBox alignment="TOP_LEFT" maxWidth="100" minWidth="100" spacing="10" style="-fx-background-color:#0000ff">
+            <Label fx:id="player1Name" style="-fx-text-fill: white"/>
+            <Label fx:id="player1score" style="-fx-text-fill: white"/>
+        </VBox>
+    </left>
+    <right>
+        <VBox alignment="TOP_RIGHT" minWidth="100" maxWidth="100" spacing="10" style="-fx-background-color: #dc143c">
+            <Label fx:id="player2Name"/>
+            <Label fx:id="player2score"/>
+        </VBox>
+    </right>
+    <center>
+        <StackPane fx:id="canvasHolder" minHeight="200" minWidth="200" style="-fx-background-color:#36454f;"/>
+    </center>
+
+</BorderPane>
